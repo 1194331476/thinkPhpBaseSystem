@@ -51,7 +51,6 @@
 			  async:false,
 			  success: function(data){
 				  data = eval("("+data+")");
-				  console.info(data);
 				  for(var i=0;i<data.length;i++){
 					  if(data[i].parentid == "0"){
 						  $("tbody").append("<tr><td></td><td></td></tr>");
@@ -116,9 +115,5 @@
 			  });
 		});
 	});
-	//点击一级导航，选中他的二级-------------------------------------------------------------
-	function checkAll(){
-		console.info($(this));
-	}
 	</script>
 </html>

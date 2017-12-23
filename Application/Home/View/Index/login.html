@@ -55,7 +55,6 @@
 			  data: data,
 			  success: function(data){
 				  data = eval("("+data+")");
-				  console.info(data);
 				  var layer = window.top.layer;
 				  layer.msg(data.msg);
 				  if(data.success == 'true'){
