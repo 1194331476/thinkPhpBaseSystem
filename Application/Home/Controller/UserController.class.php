@@ -25,7 +25,7 @@ class UserController extends Controller {
         $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
         $start = ($page - 1) * $limit;
         $list = $Model->query("select * from User where trueName like '%".$truename."%' order by id limit " . $start . "," . $limit);
-        $json_string = json_encode($list, JSON_UNESCAPED_UNICODE);
+        $json_string = json_encode($list);
         $res = '{
             "code": 0,
             "msg": "",
@@ -40,7 +40,7 @@ class UserController extends Controller {
     public function getAllList(){
         $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
         $list = $Model->query("select * from User order by id");
-        $json_string = json_encode($list, JSON_UNESCAPED_UNICODE);
+        $json_string = json_encode($list);
         $res = '{
             "code": 0,
             "msg": "",

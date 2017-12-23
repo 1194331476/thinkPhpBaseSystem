@@ -25,7 +25,7 @@ class RoleController extends Controller {
         $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
         $start = ($page - 1) * $limit;
         $list = $Model->query("select * from Role where rolename like '%".$rolename."%' order by id limit " . $start . "," . $limit);
-        $json_string = json_encode($list, JSON_UNESCAPED_UNICODE);
+        $json_string = json_encode($list);
         $res = '{
             "code": 0,
             "msg": "",
@@ -40,7 +40,7 @@ class RoleController extends Controller {
     public function getAllList(){
         $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
         $list = $Model->query("select * from Role order by id");
-        $json_string = json_encode($list, JSON_UNESCAPED_UNICODE);
+        $json_string = json_encode($list);
         $res = '{
             "code": 0,
             "msg": "",
@@ -137,6 +137,6 @@ class RoleController extends Controller {
             }
         }
         $result = array("success"=>"true","msg"=>"配置权限成功");
-        echo json_encode($result,JSON_UNESCAPED_UNICODE);
+        echo json_encode($resul);
     }
 }
