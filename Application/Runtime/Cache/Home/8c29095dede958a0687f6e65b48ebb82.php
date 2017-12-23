@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link rel="stylesheet" href="/basesystem/Public/css/common.css" />
+		<link rel="stylesheet" href="/thinkphpbasesystem/Public/css/common.css" />
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link rel="stylesheet" href="/basesystem/Public/layui/css/layui.css" />
-		<script type="text/javascript" src="/basesystem/Public/layui/layui.js" ></script>
+		<link rel="stylesheet" href="/thinkphpbasesystem/Public/layui/css/layui.css" />
+		<script type="text/javascript" src="/thinkphpbasesystem/Public/layui/layui.js" ></script>
 	</head>
 	<body>
 		<div class="layui-row">
-			<div class="layui-col-xs6 layui-col-md12" style="background-color: #393D49;background-image: url('/basesystem/Public/img/systemName.png'); background-repeat: no-repeat;">
+			<div class="layui-col-xs6 layui-col-md12" style="background-color: #393D49;background-image: url('/thinkphpbasesystem/Public/img/systemName.png'); background-repeat: no-repeat;">
 				<div class="grid-demo grid-demo-bg2">
 					<div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
 					      &nbsp;
@@ -24,7 +24,7 @@
 									<a href="javascript:;"><img src="http://t.cn/RCzsdCq" class="layui-nav-img"><?php echo ($_SESSION['user']['truename']); ?></a>
 									<dl class="layui-nav-child">
 										<dd>
-											<a href="/basesystem/index.php/Home/Index/index">退了</a>
+											<a href="/thinkphpbasesystem/index.php/Home/Index/index">退了</a>
 										</dd>
 									</dl>
 								</li>
@@ -56,8 +56,8 @@
 		</div>
 	</div>
 		<script type="text/javascript">
-			var APP = "/basesystem/index.php";
+			var APP = "/thinkphpbasesystem/index.php";
 		</script>
-		<script type="text/javascript" src="/basesystem/Public/js/admin.js" ></script>
+		<script type="text/javascript" src="/thinkphpbasesystem/Public/js/admin.js" ></script>
 	</body>
 </html>

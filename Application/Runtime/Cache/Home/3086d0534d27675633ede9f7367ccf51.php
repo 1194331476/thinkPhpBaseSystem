@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link rel="stylesheet" href="/basesystem/Public/css/common.css" />
+		<link rel="stylesheet" href="/thinkphpbasesystem/Public/css/common.css" />
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link rel="stylesheet" href="/basesystem/Public/layui/css/layui.css" />
-		<script type="text/javascript" src="/basesystem/Public/layui/layui.js" ></script>
+		<link rel="stylesheet" href="/thinkphpbasesystem/Public/layui/css/layui.css" />
+		<script type="text/javascript" src="/thinkphpbasesystem/Public/layui/layui.js" ></script>
 		<style type="text/css">
 		.layui-table-view{
 			margin-top: 0px;
@@ -36,8 +36,8 @@
     <table id="demo" lay-filter="test"></table>
   </div>
 	<script type="text/javascript">
-			var APP = "/basesystem/index.php";
-			var PUBLIC = "/basesystem/Public";
+			var APP = "/thinkphpbasesystem/index.php";
+			var PUBLIC = "/thinkphpbasesystem/Public";
 			var tableHeight = $("body").height()-$($(".layui-row")[0]).height()-50;
 			layui.use('table', function(){
 			  var table = layui.table;
@@ -134,7 +134,6 @@
 						layer.msg("请选择至少一条记录！");
 					}else{
 						var id = "";
-						console.info(rows);
 						for(var i=0;i<rows.length;i++){
 							id += rows[i].id+",";
 						}

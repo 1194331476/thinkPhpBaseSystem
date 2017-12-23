@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link rel="stylesheet" href="/basesystem/Public/css/common.css" />
+		<link rel="stylesheet" href="/thinkphpbasesystem/Public/css/common.css" />
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link rel="stylesheet" href="/basesystem/Public/layui/css/layui.css" />
-		<script type="text/javascript" src="/basesystem/Public/layui/layui.js" ></script>
+		<link rel="stylesheet" href="/thinkphpbasesystem/Public/layui/css/layui.css" />
+		<script type="text/javascript" src="/thinkphpbasesystem/Public/layui/layui.js" ></script>
 		<style type="text/css">
 		.layui-table-view{
 			margin-top: 0px;
@@ -40,8 +40,8 @@
 	</form>
 	</body>
 	<script type="text/javascript">
-	var APP = "/basesystem/index.php";
-	var PUBLIC = "/basesystem/Public";
+	var APP = "/thinkphpbasesystem/index.php";
+	var PUBLIC = "/thinkphpbasesystem/Public";
 	$(function(){
 		//获得导航-----------------------------------------------------------------------
 		$.ajax({
@@ -51,7 +51,6 @@
 			  async:false,
 			  success: function(data){
 				  data = eval("("+data+")");
-				  console.info(data);
 				  for(var i=0;i<data.length;i++){
 					  if(data[i].parentid == "0"){
 						  $("tbody").append("<tr><td></td><td></td></tr>");
@@ -116,9 +115,5 @@
 			  });
 		});
 	});
-	//点击一级导航，选中他的二级-------------------------------------------------------------
-	function checkAll(){
-		console.info($(this));
-	}
 	</script>
 </html>

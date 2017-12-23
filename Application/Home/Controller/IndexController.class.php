@@ -53,7 +53,7 @@ class IndexController extends Controller {
             }
             session("userPowerList",$arr);
         }
-        echo json_encode($result);
+        echo json_encode($result,JSON_UNESCAPED_UNICODE);
     }
     
     /**
@@ -75,7 +75,7 @@ class IndexController extends Controller {
             $res = M("user")-> data($data)->add();
             $result = array("success"=>"true","msg"=>"注册成功");
         }
-        echo json_encode($result);
+        echo json_encode($result,JSON_UNESCAPED_UNICODE);
     }
     
     /**

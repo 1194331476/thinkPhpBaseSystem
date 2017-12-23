@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link rel="stylesheet" href="/basesystem/Public/css/common.css" />
+		<link rel="stylesheet" href="/thinkphpbasesystem/Public/css/common.css" />
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link rel="stylesheet" href="/basesystem/Public/layui/css/layui.css" />
-		<script type="text/javascript" src="/basesystem/Public/layui/layui.js" ></script>
+		<link rel="stylesheet" href="/thinkphpbasesystem/Public/layui/css/layui.css" />
+		<script type="text/javascript" src="/thinkphpbasesystem/Public/layui/layui.js" ></script>
 	</head>
-<body style="background-image: url('/basesystem/Public/img/loginBack.jpg'); background-repeat: no-repeat; background-size: 100%;">
+<body style="background-image: url('/thinkphpbasesystem/Public/img/loginBack.jpg'); background-repeat: no-repeat; background-size: 100%;">
 	<div class="layui-row" style="height: 360px;">
 	</div>
 	<div class="layui-row">
@@ -40,8 +40,8 @@
 	</div>
 </body>
 <script>
-	var APP = "/basesystem/index.php";
-	var PUBLIC = "/basesystem/Public";
+	var APP = "/thinkphpbasesystem/index.php";
+	var PUBLIC = "/thinkphpbasesystem/Public";
 	//加载表单模块-----------------------------------------------------------------
 	layui.use('form', function(){
 	  var form = layui.form;
@@ -55,7 +55,6 @@
 			  data: data,
 			  success: function(data){
 				  data = eval("("+data+")");
-				  console.info(data);
 				  var layer = window.top.layer;
 				  layer.msg(data.msg);
 				  if(data.success == 'true'){
