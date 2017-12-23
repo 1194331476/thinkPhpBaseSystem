@@ -91,7 +91,6 @@ class UserController extends Controller {
         //根据用户名查询
         $User = M("User"); // 实例化User对象
         $res = $User->delete(rtrim($_POST['id'],',')); // 删除主键为1,2和5的用户数据
-        trace($res,'$res');
         $result = array("success"=>"true","msg"=>"删除成功");
         if($res>0){
             //用户名重复

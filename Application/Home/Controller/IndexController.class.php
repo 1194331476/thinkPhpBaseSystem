@@ -66,7 +66,6 @@ class IndexController extends Controller {
     public function register(){
         $data = file_get_contents("php://input");
         $data = json_decode($data,true);
-        trace($data,"$data");
         $res = 0;
         $result = array("success"=>"false","msg"=>"注册失败");
         $list = M("user")->where('username = "'.$data['userName'].'"')->select();
