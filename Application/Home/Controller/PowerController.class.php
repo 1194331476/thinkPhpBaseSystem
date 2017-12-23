@@ -66,7 +66,7 @@ class PowerController extends Controller {
         //根据用户名查询
         $power->add($data);
         $result = array("success"=>"true","msg"=>"新增成功");
-        echo json_encode($result,JSON_UNESCAPED_UNICODE);
+        echo json_encode($result);
     }
     /**
      * 删除
@@ -84,7 +84,7 @@ class PowerController extends Controller {
         }else{
             $result = array("success"=>"false","msg"=>"删除失败！");
         }
-        echo json_encode($result,JSON_UNESCAPED_UNICODE);
+        echo json_encode($result);
     }
     /**
      * 跳转编辑页面
@@ -108,6 +108,6 @@ class PowerController extends Controller {
         if($res==0){
             $result = array("success"=>"false","msg"=>"修改失败");
         }
-        echo json_encode($result,JSON_UNESCAPED_UNICODE);
+        echo json_encode($result);
     }
 }

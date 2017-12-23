@@ -80,7 +80,7 @@ class UserController extends Controller {
                 }
             }
         }
-        echo json_encode($result,JSON_UNESCAPED_UNICODE);
+        echo json_encode($result);
     }
     /**
      * 删除
@@ -98,7 +98,7 @@ class UserController extends Controller {
         }else{
             $result = array("success"=>"false","msg"=>"删除失败！");
         }
-        echo json_encode($result,JSON_UNESCAPED_UNICODE);
+        echo json_encode($result);
     }
     /**
      * 跳转编辑页面
@@ -128,6 +128,6 @@ class UserController extends Controller {
                 M("userandrole")->add(array("userId"=>$data['id'],"roleId"=>$value));
             }
         }
-        echo json_encode($result,JSON_UNESCAPED_UNICODE);
+        echo json_encode($result);
     }
 }

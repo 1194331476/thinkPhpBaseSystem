@@ -64,7 +64,7 @@ class RoleController extends Controller {
         //根据用户名查询
         $role->add($data);
         $result = array("success"=>"true","msg"=>"新增成功");
-        echo json_encode($result,JSON_UNESCAPED_UNICODE);
+        echo json_encode($result);
     }
     /**
      * 删除
@@ -82,7 +82,7 @@ class RoleController extends Controller {
         }else{
             $result = array("success"=>"false","msg"=>"删除失败！");
         }
-        echo json_encode($result,JSON_UNESCAPED_UNICODE);
+        echo json_encode($result);
     }
     /**
      * 跳转编辑页面
@@ -104,7 +104,7 @@ class RoleController extends Controller {
         if($res==0){
             $result = array("success"=>"false","msg"=>"修改失败");
         }
-        echo json_encode($result,JSON_UNESCAPED_UNICODE);
+        echo json_encode($result);
     }
     
     /**
@@ -119,7 +119,7 @@ class RoleController extends Controller {
      * */
     public function powerTreeList(){
         $powerList = M("")->query("select rp.roleId,p.*,case when p.parentId=0 then p.id ELSE CONCAT(p.parentId,'-',p.id) end treeCode from power p LEFT JOIN roleandpower rp on p.id = rp.powerId and rp.roleId = ".$_GET['roleId']." ORDER BY treeCode");
-        echo json_encode($powerList,JSON_UNESCAPED_UNICODE);
+        echo json_encode($powerList);
     }
     /**
      * 修改权限
